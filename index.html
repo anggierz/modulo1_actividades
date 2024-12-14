@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Esplucat</title>
+    <title>Acción Solidaria</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Esplucat: un hogar para los gatitos de Esplugues</h1>
-    </header>
     <nav>
         <div class="navigation">
             <ul>
@@ -17,35 +14,54 @@
                     <a href="/">Inicio</a>
                 </li>
                 <li>
-                    <a href="gatitos.html">Nuestros gatos</a>
+                    <a href="campaigns.html">Campañas</a>
                 </li>
                 <li>
-                    <a href="about-us.html">Acerca de nosotros</a>
+                    <a href="about-us.html">Sobre nosotros</a>
                 </li>
                 <li>
-                    <a href="contact-us.html">Contáctanos</a>
+                    <a href="contact-us.html">Contacto</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <header>
+        <h1>Acción Solidaria</h1>
+    </header>
     <main>
-        <div class="header-image">
-            <img src="./images/header_image.avif" alt="Portada" width="720px" />
-            <div class="header-text">Construye su nuevo hogar</div>
+        <div class="container">
+            <section id="home">
+                <p>Tu solidaridad puede cambiar vidas. Únete a nosotros y marca la diferencia.</p>
+                <img src="./images/header.avif" alt="Imagen de una gota de agua" width="720px">
+            </section>
+            <section id="campaigns">
+                <h2>Campañas destacadas</h2>
+                <div class="campaign">
+                    <h3>Proyecto Esplucat</h3>
+                    <img src="./images/cat_image.avif" alt="Imagen de un gato" width="320px">
+                    <p>
+                        Construcción de un refugio de animales para los gatos de Esplugues de Llobregat.
+                        Estamos recaudando fondos para un refugio de animales local que necesita tu ayuda.
+                        Tus donaciones proporcionarán alimentos, medicinas y cuidados esenciales para los animales.
+                    </p>
+                    <div class="donation-bar">
+                        <div class="progress-bar">
+                            <progress id="file" max="100" value="70">70%</progress>
+                        </div>
+                        <div class="quantity">
+                            <p>10€ recaudados</p>
+                        </div>
+                        <div class="donators">
+                            <p>20 colaboradores</p>
+                        </div>
+                    </div>
+                    <a href="#" class="cta-button">Dona Ahora</a>
+                </div>
+            </section>
         </div>
-        <section>
-            <h2>Compra del terreno para el refugio</h2>
-            <label for="recaudacion-refugio">Recaudado:</label>
-            <progress id="recaudacion-refugio" value="32" max="100"> 2200€ recaudados</progress>
-
-            <h2>Comida, medicamentos, medicinas...</h2>
-            <label for="recaudacion-comida">Recaudado:</label>
-            <progress id="recaudacion-comida" value="1" max="100"> 2200€ recaudados</progress>
-        </section>
-
     </main>
     <footer>
-        <p>&copy; Esplucat 2024.</p>
+        <p>&copy; 2024 Acción Solidaria. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
