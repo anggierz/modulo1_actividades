@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+    --blue-background-color: #218dab;
+    --white-background-color: #ffffff;
+    --dark-cyan-color: #119DA4;
+    --cerulean-color: #0C7489;
+    --midnight-green-color: #13505B;
+    --black: #040404;
+    --timberwolf-color: #D7D9CE;
+    --white: white;
+    --spacing-default: 20px;
+    --font-text: "Montserrat";
+    --font-text-secondary: "Roboto";
+    --radius: 0.2rem;
+}
 
 body {
-    background-color: #ffffff;
-    font-family: "Montserrat";
+    background-color: var(--white);
+    font-family: var(--font-text);
     font-weight: 300;
     font-style: normal;
     display: flex;
@@ -14,70 +28,160 @@ body {
 }
 
 header {
-    background-color: #218dab;
-    color: white;
+    background: linear-gradient(to right, var(--dark-cyan-color), var(--cerulean-color));
+    color: var(--white);
+    padding: 10px 20px;
     text-align: center;
-    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 5000;
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    logo {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 nav {
-    width: 100%;
+    /* width: 100%;
     display: flex;
-    justify-content: center;
-    background-color: #000000;
-    padding: 0;
+    justify-content: center; */
+    /* background-color: var(--black); */
+    /* padding: 0; */
+
+    ul {
+
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        /* overflow: hidden; */
+
+        li {
+            display: inline;
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                color: var(--white);
+                font-size: 1.1em;
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    border-radius: 5px;
+                    color: var(--timberwolf-color);
+                }
+            }
+        }
+    }
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
-}
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+main {
+    padding: var(--spacing-default);
 }
 
-nav ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
-    color: #fff;
+section {
+    margin-right: var(--spacing-default);
 }
 
-#home img {
-    width: 100%;
-    height: 20%;
+#home {
+
+
+    .header {
+
+        margin: 0;
+        padding: 0;
+
+        
+        text-align: center;
+        img {
+            background-size: cover;
+            background-size: 100% 100%;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        p {
+            text-align: center;
+            transform: translate(0, -900%);
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+    }
+
 }
 
-#home p {
-    text-align: center;
-    font-weight: 800;
-    font-size: 2.5em;
-    margin: 0 auto;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+h2 {
+    border: none;
+    border-radius: 40px 10px;
+    background: var(--timberwolf-color)
 }
 
-#campaigns {
-    text-align: center;
-}
 
 .campaign {
-    text-align: left;
+    background-color: var(--timberwolf-color);
+    margin-bottom: var(--spacing-default);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.6 ease-in-out;
+
+    h3 {
+        font-family: var(--font-text-secondary);
+        font-size: 2em;
+    }
+
+    .campaign-image {
+        border-radius: 30px;
+        width: 50%;
+    }
+
+    p {
+        font-family: var(--font-text-secondary);
+    }
+
 }
 
+.quantity {
+    .icons {
+        display: flex;
+        justify-content: space-around;
+
+    }
+}
+
+
+
+.donate-button {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    background: #6aeeb5;
+    border: none;
+    outline: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+
+    &:hover {
+        background: #29e6a7;
+    }
+}
 
 
 footer {
-    background-color: #218dab;
-    color: white;
+    background: linear-gradient(to right, var(--dark-cyan-color), var(--cerulean-color));
+    color: var(--white);
     text-align: center;
     padding: 1em 0;
     position: relative;

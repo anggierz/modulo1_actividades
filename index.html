@@ -7,55 +7,60 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav>
-        <div class="navigation">
-            <ul>
-                <li>
-                    <a href="/">Inicio</a>
-                </li>
-                <li>
-                    <a href="campaigns.html">Campañas</a>
-                </li>
-                <li>
-                    <a href="about-us.html">Sobre nosotros</a>
-                </li>
-                <li>
-                    <a href="contact-us.html">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
     <header>
         <h1>Acción Solidaria</h1>
+        <img id="logo" src="./icons/icons8-donate-64.png" alt="Ícono" width="64px">
+        <nav>
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="/">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="campaigns.html">Campañas</a>
+                    </li>
+                    <li>
+                        <a href="about-us.html">Sobre nosotros</a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="container">
             <section id="home">
-                <p>Tu solidaridad puede cambiar vidas. Únete a nosotros y marca la diferencia.</p>
-                <img src="./images/header.avif" alt="Imagen de una gota de agua" width="720px">
+                <div class="header">
+                    <img src="./images/header.avif" alt="Imagen de una gota de agua" width="720px">
+                    <p>Tu solidaridad puede cambiar vidas. Únete a nosotros y marca la diferencia.</p>
+                </div>
             </section>
-            <section id="campaigns">
+            <section>
                 <h2>Campañas destacadas</h2>
                 <div class="campaign">
                     <h3>Proyecto Esplucat</h3>
-                    <img src="./images/cat_image.avif" alt="Imagen de un gato" width="320px">
+                    <img src="./images/cat_image.avif" class="campaign-image" alt="Imagen de un gato" width="320px">
                     <p>
                         Construcción de un refugio de animales para los gatos de Esplugues de Llobregat.
                         Estamos recaudando fondos para un refugio de animales local que necesita tu ayuda.
                         Tus donaciones proporcionarán alimentos, medicinas y cuidados esenciales para los animales.
                     </p>
-                    <div class="donation-bar">
+                    <div class="donation-details">
                         <div class="progress-bar">
-                            <progress id="file" max="100" value="70">70%</progress>
+                            <progress id="progress-bar-completion" max="100" value="70">70%</progress>
                         </div>
                         <div class="quantity">
+                            <img src="./icons/icons8-money-48.png" class="icons" alt="Ícono de dinero" width="32px">
                             <p>10€ recaudados</p>
                         </div>
                         <div class="donators">
+                            <img src="./icons/icons8-group-48.png" class="icons" alt="Ícono de dinero" width="32px">
                             <p>20 colaboradores</p>
                         </div>
                     </div>
-                    <a href="#" class="cta-button">Dona Ahora</a>
+                    <button class="donate-button">Dona Ahora</button>
                 </div>
             </section>
         </div>
