@@ -1,48 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Esplucat</title>
-</head>
-<body>
-    <header>
-        <h1>Esplucat: un hogar para los gatitos de Esplugues</h1>
-    </header>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Inicio</a>
-            </li>
-            <li>
-                <a href="gatitos.html">Nuestros gatos</a>
-            </li>
-            <li>
-                <a href="about-us.html">Acerca de nosotros</a>
-            </li>
-            <li>
-                <a href="contact-us.html">Contáctanos</a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <img src="./images/header_image.avif" alt="Portada" width="720px" />
-        </section>
-
-        <section>
-            <h2>Compra del terreno para el refugio</h2>
-            <label for="recaudacion-refugio">Recaudado:</label>
-            <progress id="recaudacion-refugio" value="32" max="100"> 2200€ recaudados</progress>
-
-            <h2>Comida, medicamentos, medicinas...</h2>
-            <label for="recaudacion-comida">Recaudado:</label>
-            <progress id="recaudacion-comida" value="1" max="100"> 2200€ recaudados</progress>
-        </section>
-
-    </main>
-    <footer>
-        <p>&copy; Esplucat 2024.</p>
-    </footer>
-</body>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Acción Solidaria</title>
+      <link rel="stylesheet" href="css/styles.css">
+   </head>
+   <body>
+      <header>
+         <h1>Acción Solidaria</h1>
+         <img id="logo" src="./icons/icons8-donate-64.png" alt="Ícono" width="64px">
+         <nav>
+            <div class="navigation">
+               <ul>
+                  <li>
+                     <a href="/">Inicio</a>
+                  </li>
+                  <li>
+                     <a href="campaigns.html">Campañas</a>
+                  </li>
+                  <li>
+                     <a href="about-us.html">Sobre nosotros</a>
+                  </li>
+                  <li>
+                     <a href="contact-us.html">Contacto</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <div id="banner">
+            <p>Tu solidaridad puede cambiar vidas. Únete a nosotros y marca la diferencia.</p>
+         </div>
+         <h2>Campañas destacadas</h2>
+         <div class="container">
+            <div class="campaign">
+               <h3>Proyecto Esplucat</h3>
+               <img src="./images/cat_four.avif" class="campaign-image" alt="Imagen de un gato" width="320px">
+               <p>
+                  Construcción de un refugio de animales para los gatos de la colonia felina de Esplugues de Llobregat.
+                  Estamos recaudando fondos para un refugio de animales local que necesita tu ayuda.
+                  Tus donaciones proporcionarán alimentos, medicinas y cuidados esenciales para los animales.
+               </p>
+               <div class="progress-bar-wrapper">
+                  <label class="progress-bar__value" htmlFor="progress-bar">14.000€ recaudados</label>
+                  <progress id="progress-bar-completion" max="100" value="70"></progress>
+               </div>
+               <div class="donation-details">
+                  <div class="quantity">
+                    <div class="quantity-image">
+                        <img src="./icons/icons8-money-48.png" class="icons" alt="Ícono de dinero" width="32px">
+                    </div>
+                    <div class="quantity-value">
+                        <p>Objetivo de 20.000€</p>
+                    </div>
+                  </div>
+                  <div class="donators">
+                     <img src="./icons/icons8-group-48.png" class="icons" alt="Ícono de dinero" width="32px">
+                     <p>20 colaboradores</p>
+                  </div>
+               </div>
+               <button class="donate-button">Dona Ahora</button>
+            </div>
+            <div class="campaign">
+               <h3>Salvando Patitas</h3>
+               <img src="./images/victor-g-N04FIfHhv_k-unsplash.jpg" class="campaign-image" alt="Imagen de un perro" width="320px">
+               <p>
+                  Estamos recaudando fondos para la operación de <b>Atreus</b>, un adorable perro que necesita una intervención quirúrgica urgente para mejorar su calidad de vida. Cada donación cuenta y puede marcar la diferencia entre el dolor y una vida plena y feliz. Con tu apoyo, podremos cubrir los costos médicos y asegurar que <b>Atreus</b> reciba el cuidado que necesita.
+               </p>
+               <div class="progress-bar-wrapper">
+                   <label class="progress-bar__value" htmlFor="progress-bar">600€ recaudados</label>
+                   <progress id="progress-bar-completion" max="100" value="30"></progress>
+                </div>
+               <div class="donation-details">
+                  <div class="quantity">
+                     <img src="./icons/icons8-money-48.png" class="icons" alt="Ícono de dinero" width="32px">
+                     <p>Objetivo de 2000€</p>
+                  </div>
+                  <div class="donators">
+                     <img src="./icons/icons8-group-48.png" class="icons" alt="Ícono de dinero" width="32px">
+                     <p>5 colaboradores</p>
+                  </div>
+               </div>
+               <button class="donate-button">Dona Ahora</button>
+            </div>
+         </div>
+         </div>
+      </main>
+      <footer>
+         <p>&copy; 2024 Acción Solidaria. Todos los derechos reservados.</p>
+      </footer>
+   </body>
 </html>

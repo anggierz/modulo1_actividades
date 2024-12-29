@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --blue-background-color: #218dab;
+    --white-background-color: #ffffff;
+    --dark-cyan-color: #119DA4;
+    --cerulean-color: #0C7489;
+    --midnight-green-color: #13505B;
+    --black: #040404;
+    --timberwolf-color: #D7D9CE;
+    --white: white;
+    --green-donation: #6aeeb5;
+    --spacing-default: 20px;
+    --font-text: "Montserrat";
+    --font-text-secondary: "Roboto";
+    --radius: 0.2rem;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--font-text);
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(to right, var(--dark-cyan-color), var(--cerulean-color));
+    color: var(--white);
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 5000;
+
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    logo {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+nav {
+
+    ul {
+
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        /* overflow: hidden; */
+
+        li {
+            display: inline;
+            margin: 1.1rem;
+
+            a {
+                text-decoration: none;
+                color: var(--white);
+                font-size: 1.1em;
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    border-radius: 5px;
+                    color: var(--timberwolf-color);
+                }
+            }
+        }
+    }
+}
+
+main {
+    padding: var(--spacing-default);
+}
+
+#banner {
+
+        background-image: url(/images/header.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 120vh;
+        margin-bottom: 1rem;
+
+        p {
+
+            position: relative;
+            top: 10vh;
+            font-family: var(--font-text);
+            font-size: 2.5em;
+            font-weight: bolder;
+            text-align: center;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+}
+
+
+h2 {
+    border: none;
+    border-radius: 40px 10px;
+    background: var(--timberwolf-color)
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.campaign {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+    background-color: var(--timberwolf-color);
+    margin-bottom: var(--spacing-default);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-text-secondary);
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .campaign-image {
+        border-radius: 30px;
+        width: 95%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    p {
+        font-family: var(--font-text-secondary);
+        margin: 0 auto;
+    }
+
+    .progress-bar-wrapper {
+        position: relative;
+        margin-top: 1rem;
+
+        .progress-bar__value {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            gap: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          #progress-bar-completion {
+            width: 100%;
+            height: 20px;
+            border-radius: 50px;
+            color: var(--green-donation);
+          }
+    }
+
+    .donation-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px;
+
+        .quantity {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .donators {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+    }
+
+}
+
+.donate-button {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    background: var(--green-donation);
+    border: none;
+    outline: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+
+    &:hover {
+        background: #29e6a7;
+    }
+}
+
+
+
+
+/* CSS de la sección de campañas */
+
+.campaign-searcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+
+    #search-form {
+        display: flex;
+
+        input[type="search"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            font-size: 16px;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: var(--timberwolf-color);
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: var(--cerulean-color);
+            color: var(--white);
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+    }
+}
+
+/* CSS de la seccion sobre nosotros */
+
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+
+    .about-us-text {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .about-us-image {
+        border-radius: 10px;
+        width: 30%;
+        margin: 4rem auto;
+    }
+
+}
+
+/* CSS de la sección de contacto */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: var(--timberwolf-color);
+    border-radius: 10px;
+    width: 100%;
+    height: 30rem;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+
+    label {
+        display: block;
+        margin: 10px 0 5px 5px;
+        color: var(--black);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-family: var(--font-text-secondary);
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: var(--dark-cyan-color);
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: var(--cerulean-color);
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+footer {
+    background: linear-gradient(to right, var(--dark-cyan-color), var(--cerulean-color));
+    color: var(--white);
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
