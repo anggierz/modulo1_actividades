@@ -26,11 +26,13 @@ body {
     margin: 0;
     padding: 0;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background: linear-gradient(to right, var(--dark-cyan-color), var(--cerulean-color));
     color: var(--white);
+    width: 100%;
     padding: 10px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -61,7 +63,7 @@ nav {
 
         li {
             display: inline;
-            margin: 0 15px;
+            margin: 1.1rem;
 
             a {
                 text-decoration: none;
@@ -87,14 +89,14 @@ main {
 
         background-image: url(/images/header.avif);
         background-size: cover;
+        background-repeat: no-repeat;
         height: 120vh;
-        margin-bottom: 30px;
+        margin-bottom: 1rem;
 
         p {
 
             position: relative;
-            top: 5vh;
-            width: 800px;
+            top: 10vh;
             font-family: var(--font-text);
             font-size: 2.5em;
             font-weight: bolder;
@@ -117,7 +119,8 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    /* gap: 20px; */
+    gap: 1rem;
     justify-content: space-around;
 }
 
@@ -161,6 +164,9 @@ h2 {
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
             gap: 8px;
             top: 50%;
             left: 50%;
@@ -178,7 +184,8 @@ h2 {
     .donation-details {
         display: flex;
         flex-direction: row;
-        gap: 10rem;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
         margin: 20px;
 
@@ -186,14 +193,14 @@ h2 {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: left;
+            align-items: center;
         }
 
         .donators {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: left;
+            align-items: center;
         }
 
     }
@@ -217,11 +224,127 @@ h2 {
 }
 
 
-.capmaign-searcher {
-    width: 100%;
+
+
+/* CSS de la sección de campañas */
+
+.campaign-searcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
 
     #search-form {
-        width: 100%;
+        display: flex;
+
+        input[type="search"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            font-size: 16px;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: var(--timberwolf-color);
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: var(--cerulean-color);
+            color: var(--white);
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+    }
+}
+
+/* CSS de la seccion sobre nosotros */
+
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+
+    .about-us-text {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .about-us-image {
+        border-radius: 10px;
+        width: 30%;
+        margin: 4rem auto;
+    }
+
+}
+
+/* CSS de la sección de contacto */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: var(--timberwolf-color);
+    border-radius: 10px;
+    width: 100%;
+    height: 30rem;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+
+    label {
+        display: block;
+        margin: 10px 0 5px 5px;
+        color: var(--black);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-family: var(--font-text-secondary);
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: var(--dark-cyan-color);
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: var(--cerulean-color);
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -231,7 +354,8 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 1em 0;
-    /* position: relative; */
+    position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
