@@ -45,8 +45,8 @@
                   Tus donaciones proporcionarán alimentos, medicinas y cuidados esenciales para los animales.
                </p>
                <div class="progress-bar-wrapper">
-                  <label class="progress-bar__value" htmlFor="progress-bar">14.000€ recaudados</label>
-                  <progress id="progress-bar-completion" max="100" value="70"></progress>
+                  <label class="progress-bar__value" id="progress-bar-label" htmlFor="progress-bar">14000€ recaudados</label>
+                  <progress id="progress-bar-completion" max="20000" value="14000"></progress>
                </div>
                <div class="donation-details">
                   <div class="quantity">
@@ -59,10 +59,10 @@
                   </div>
                   <div class="donators">
                      <img src="./icons/icons8-group-48.png" class="icons" alt="Ícono de dinero" width="32px">
-                     <p>20 colaboradores</p>
+                     <p id="num-colaboradores">20 colaboradores</p>
                   </div>
                </div>
-               <button class="donate-button">Dona Ahora</button>
+               <button class="donate-button" id="boton-donaciones">Dona Ahora</button>
             </div>
             <div class="campaign">
                <h3>Salvando Patitas</h3>
@@ -72,7 +72,7 @@
                </p>
                <div class="progress-bar-wrapper">
                    <label class="progress-bar__value" htmlFor="progress-bar">600€ recaudados</label>
-                   <progress id="progress-bar-completion" max="100" value="30"></progress>
+                   <progress id="progress-bar-completion" max="2000" value="600"></progress>
                 </div>
                <div class="donation-details">
                   <div class="quantity">
@@ -84,7 +84,7 @@
                      <p>5 colaboradores</p>
                   </div>
                </div>
-               <button class="donate-button">Dona Ahora</button>
+               <button id="donate-button" class="donate-button">Dona Ahora</button>
             </div>
          </div>
          </div>
@@ -92,6 +92,6 @@
       <footer>
          <p>&copy; 2024 Acción Solidaria. Todos los derechos reservados.</p>
       </footer>
-      <script src="./js/script.js"></script>
+      <script src="./js/index-script.js"></script>
    </body>
 </html>

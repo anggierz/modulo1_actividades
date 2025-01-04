@@ -1,16 +1,11 @@
-// document.addEventListener("DOMContentLoaded", function() {
+//Métodos del DOM
 
-//     //const button = document.getElementById("submit-formulario-contacto"); 
-//     //button.addEventListener("click", formValidation);
+document.addEventListener("DOMContentLoaded", function() {
 
-    
-// });
-
-document.getElementById('formulario').addEventListener('submit', (e) => {
-    e.preventDefault();
-    validacionFormulario('formulario');
+    document.getElementById('formulario').addEventListener('submit', validacionFormulario('formulario'));
 });
-    
+
+//Funciones JS de la página HTML contact-us (Actividad 4a)
 function validacionFormulario(formularioId)
 {
     debugger;
