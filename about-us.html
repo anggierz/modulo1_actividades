@@ -1,57 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de nosotros</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <h1>Acción Solidaria</h1>
-        <img id="logo" src="./icons/icons8-donate-64.png" alt="Ícono" width="64px">
-        <nav>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Acerca de nosotros</title>
+      <link rel="stylesheet" href="css/styles.css">
+   </head>
+   <body>
+      <header>
+         <h1>Acción Solidaria</h1>
+         <img id="logo" src="./icons/icons8-donate-64.png" alt="Ícono" width="64px">
+         <nav>
             <div class="navigation">
-                <ul>
-                    <li>
-                        <a href="/">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="campaigns.html">Campañas</a>
-                    </li>
-                    <li>
-                        <a href="about-us.html">Sobre nosotros</a>
-                    </li>
-                    <li>
-                        <a href="contact-us.html">Contacto</a>
-                    </li>
-                </ul>
+               <ul>
+                  <li>
+                     <a href="/">Inicio</a>
+                  </li>
+                  <li>
+                     <a href="campaigns.html">Campañas</a>
+                  </li>
+                  <li>
+                     <a href="about-us.html">Sobre nosotros</a>
+                  </li>
+                  <li>
+                     <a href="contact-us.html">Contacto</a>
+                  </li>
+               </ul>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="about-us">
+         </nav>
+      </header>
+      <main>
+         <div class="about-us">
             <p class="about-us-text">
-                En Acción Solidaria, nuestra misión es brindar apoyo y esperanza a las comunidades
-                más vulnerables a través de donaciones y acciones solidarias. Creemos en la fuerza de la colaboración
-                y en el impacto positivo que cada persona puede tener en el mundo. Nuestra plataforma facilita la recaudación de
-                fondos fondos para diversas causas, desde asistencia médica urgente hasta la construcción de infraestructuras
-                esenciales. Cada proyecto en el que nos involucramos está cuidadosamente seleccionado para asegurar que nuestras
-                contribuciones lleguen a donde más se necesitan. Gracias a la generosidad de nuestros donantes y la dedicación
-                de nuestro equipo, hemos podido transformar vidas y construir un futuro mejor para muchos.
-                ¡Únete a nosotros en nuestra misión de hacer el bien y marcar la diferencia!
-
-                <br>
-                <br>
-
-                Tanto este proyecto como esta página web han sido creados para la asignatura Fundamentos del Desarrollo
-                Web HTML y CSS del Máster de Desarrollo Web de la UEM.
+               En Acción Solidaria, nuestra misión es brindar apoyo y esperanza a las comunidades
+               más vulnerables a través de donaciones y acciones solidarias. Creemos en la fuerza de la colaboración
+               y en el impacto positivo que cada persona puede tener en el mundo. Nuestra plataforma facilita la recaudación de
+               fondos fondos para diversas causas, desde asistencia médica urgente hasta la construcción de infraestructuras
+               esenciales. Cada proyecto en el que nos involucramos está cuidadosamente seleccionado para asegurar que nuestras
+               contribuciones lleguen a donde más se necesitan. Gracias a la generosidad de nuestros donantes y la dedicación
+               de nuestro equipo, hemos podido transformar vidas y construir un futuro mejor para muchos.
+               ¡Únete a nosotros en nuestra misión de hacer el bien y marcar la diferencia!
+               <br>
+               <br>
+               Tanto este proyecto como esta página web han sido creados para la asignatura Fundamentos del Desarrollo
+               Web HTML y CSS del Máster de Desarrollo Web de la UEM.
             </p>
-            <img class="about-us-image" src="./images/donation.jpg" alt="Imagen de unas manos sujetando dinero" width="720px">
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Acción Solidaria. Todos los derechos reservados.</p>
-    </footer>
-</body>
+            <!-- <img class="about-us-image" src="./images/donation.jpg" alt="Imagen de unas manos sujetando dinero" width="720px"> -->
+            <div class="carousel-container">
+               <div class="myImages fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="./images/donation.jpg" style="width:100%">
+                  <div class="text">Campañas humanitarias</div>
+               </div>
+               <div class="myImages fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="./images/nature.jpg" style="width:100%">
+                  <div class="text">Campañas ecológicas</div>
+               </div>
+               <div class="myImages fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="./images/matthew-henry-2Ts5HnA67k8-unsplash.jpg" style="width:100%">
+                  <div class="text">Campañas animalistas</div>
+               </div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>              
+         </div>
+      </main>
+      <footer>
+         <p>&copy; 2024 Acción Solidaria. Todos los derechos reservados.</p>
+      </footer>
+      <script src="./js/about.us.script.js"></script>
+   </body>
 </html>
