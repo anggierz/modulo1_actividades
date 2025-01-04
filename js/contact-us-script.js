@@ -1,35 +1,24 @@
-//Métodos del DOM
+//Primer evento: en el submit del formulario, cancelo el envío y saco una alerta para el usuario
+document.getElementById('formulario').addEventListener('submit', (e) => {
+    e.preventDefault(); //Evitar el envío de formulario
+    let inputNombre = document.getElementById("nombre").value;
+    let inputCorreo = document.getElementById("correo").value;
 
-document.addEventListener("DOMContentLoaded", function() {
-
-    document.getElementById('formulario').addEventListener('submit', validacionFormulario('formulario'));
+    let mensaje = `Lo sentimos ${inputNombre} con email: ${inputCorreo}, no podemos enviar este formulario porque no tenemos un endpoint al que enviar estos datos.`
+    alert(mensaje);
 });
 
-//Funciones JS de la página HTML contact-us (Actividad 4a)
-function validacionFormulario(formularioId)
-{
-    debugger;
-    const formulario = document.getElementById(formularioId);
-    const camposTexto = formulario.querySelectorAll('input[type="text"]');
+//Segundo evento: en el onchange del campo "Describe brevemente tu proyecto", resalto en rojo el campo si el mensaje
+//excede los 200 caracteres
 
-    camposTexto.forEach( (campo) => comprobarInputsVacios(campo));
+const descripcionProyecto = document.getElementById("mensaje");
 
-    const camposEmail =  document.querySelectorAll('input[type="email"]');
+descripcionProyecto.addEventListener("change", () => {
 
-    camposEmail.forEach( (campo) => comprobarInputsVacios(campo));
-        
-
-}
-
-function comprobarInputsVacios(input)
-{
-
-    debugger;
-    if (input.value.trim().length === 0) {
-
-        input.classList.add('error');
+    if (descripcionProyecto.value.length >= 500) {
+        alert("Has excedido los 500 caracteres, por favor, reduce el tamaño de tu mensaje");
+        descripcionProyecto.classList.add('error');
+    } else {
+        descripcionProyecto.classList.remove('error');
     }
-    else {
-        input.classList.remove('error');
-    }
-}
+});
