@@ -21,11 +21,11 @@ Funciona de la siguiente manera:
  - Se crea el objeto datos de campaña Esplucat con: objetivo recaudación, cantidad recaudada, colaboradores/donantes y fecha
  de finalización de la campaña. Estos datos pueden ser modificados por el usuario que pruebe la funcionalidad.
 
- -Al darle al botón "Dona Ahora" de la campaña Esplucat, se hace un prompt al usuario pidiendo la cantidad a donar. Se añaden
+ - Al darle al botón "Dona Ahora" de la campaña Esplucat, se hace un prompt al usuario pidiendo la cantidad a donar. Se añaden
  validaciones para comprobar que se introduce un número válido, que la donación no excede la cantidad pendiente a recaudar y que
  la campaña no esté finalizada.
 
- -Pasadas las validaciones, se tiene en cuenta la donación y se modifica la barra de progreso y el número de colaboradores así
+ - Pasadas las validaciones, se tiene en cuenta la donación y se modifica la barra de progreso y el número de colaboradores así
  como el objeto datos de campaña Esplucat para tener los datos al día y permitir al usuario ir haciendo donaciones hasta llegar
  al objetivo.
 
