@@ -47,7 +47,7 @@ function cuentaRegresiva(fechaFin) {
     //Tiempo < 0 significa que la campaña ha finalizado
     if (tiempoRestante < 0) {
       clearInterval(contador);
-      document.getElementById("tiempo-restante").innerHTML = "Recaudación Finalizada";
+      document.getElementById("tiempo-restante").innerHTML = "Campaña finalizada";
     }
   }, 1000);
 }
