@@ -5,6 +5,8 @@ let campanaEsplucat = new DatosCampanas(20000, 14000, 20, "2025-12-31T00:00:00")
 
 ///<summary>Función constructora del objeto camapaña</summary>
 ///<param name="objetivoEconomico" type="Number">Dinero a recaudar para la campaña</param>
+///<param name="cantidadRecaudada" type="Number">Dinero recaudado hasta el momento</param>
+///<param name="colaboradores" type="Number">Número de personas que han contribuido económicamente a la campaña</param>
 ///<param name="fechaFinalizacion" type="Date">Fecha en la que finaliza la campaña. Formato Date: ISO 8601 en zona horaria Madrid. Ejemplo: YYYY-MM-DDTHH:mm:ss.sssZ</param>
 ///<returns type="void"/>
 function DatosCampanas(objetivoEconomico, cantidadRecaudada, colaboradores, fechaFinalizacion) {
@@ -52,7 +54,7 @@ function cuentaRegresiva(fechaFin) {
   }, 1000);
 }
 
-///<summary>Función que salta al darle al botón "Dona Ahora" de la campaña Esplucat. Este recibe la donación
+///<summary>Función que salta al darle al botón "Dona Ahora" de la campaña Esplucat. Esta recibe la donación
 // a partir de un prompt a usuario</summary>
 ///<returns type="void"/>
 function recibirDonacion() {
@@ -102,7 +104,7 @@ function recibirDonacion() {
 
 
 ///<summary>Función que modifica los elementos del DOM: barra de progreso y colaboradores para tener en cuenta la donación</summary>
-///<param name="cantidad" type="Number">Fecha en la que finaliza la campaña</param>
+///<param name="cantidad" type="Number">Dinero que se va a aportar a la campaña</param>
 ///<returns type="void"/>
 function actualizarBarraProgreso(cantidad) {
   //Actualización barra progreso
