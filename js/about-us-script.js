@@ -1,6 +1,3 @@
-//Método del DOM
-
-
 let indice = 0;
 carruselImagenes();
 
@@ -18,5 +15,5 @@ function carruselImagenes() {
   }
   imagenes[indice-1].style.display = "block";  
   dots[indice-1].className += " active";
-  setTimeout(carruselImagenes, 2000); // Change image every 2 seconds
+  setTimeout(carruselImagenes, 2000); // Imágenes cambian cada dos segundos, pero se puede modificar cambiando la función setTimeout
 }
